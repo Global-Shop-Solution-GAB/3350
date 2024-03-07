@@ -1,0 +1,373 @@
+Program.Sub.ScreenSU.Start
+gui.F_Daily_Maint..create
+gui.F_Daily_Maint..caption("Daily Maintenance")
+gui.F_Daily_Maint..size(10710,8175)
+gui.F_Daily_Maint..position(0,0)
+gui.F_Daily_Maint..event(unload,f_daily_maint_unload)
+gui.F_Daily_Maint..alwaysontop(False)
+gui.F_Daily_Maint..fontname("Arial")
+gui.F_Daily_Maint..fontsize(8)
+gui.F_Daily_Maint..forecolor(0)
+gui.F_Daily_Maint..fontstyle(,,,,)
+gui.F_Daily_Maint..BackColor(-2147483633)
+gui.F_Daily_Maint..controlbox(True)
+gui.F_Daily_Maint..maxbutton(True)
+gui.F_Daily_Maint..minbutton(True)
+gui.F_Daily_Maint..mousepointer(0)
+gui.F_Daily_Maint..moveable(True)
+gui.F_Daily_Maint..sizeable(False)
+gui.F_Daily_Maint..ShowInTaskBar(True)
+gui.F_Daily_Maint..titlebar(True)
+gui.F_Daily_Maint.lbl_Employee.create(label,"Employee",True,795,255,1,200,200,True,0,Arial,8,-2147483633,0)
+gui.F_Daily_Maint.lbl_WC.create(label,"Workcenter",True,1965,165,1,7700,3600,True,0,Arial,8,-2147483633,0)
+gui.F_Daily_Maint.txt_comments.create(textboxm)
+gui.F_Daily_Maint.txt_comments.text("")
+gui.F_Daily_Maint.txt_comments.visible(True)
+gui.F_Daily_Maint.txt_comments.size(10170,2505)
+gui.F_Daily_Maint.txt_comments.zorder(0)
+gui.F_Daily_Maint.txt_comments.position(200,1025)
+gui.F_Daily_Maint.txt_comments.enabled(True)
+gui.F_Daily_Maint.txt_comments.alignment(0)
+gui.F_Daily_Maint.txt_comments.fontname("Arial")
+gui.F_Daily_Maint.txt_comments.fontsize(8)
+gui.F_Daily_Maint.txt_comments.BackColor(-2147483643)
+gui.F_Daily_Maint.chk_daily_maint.create(checkbox)
+gui.F_Daily_Maint.chk_daily_maint.caption("Daily Maintenance Completed")
+gui.F_Daily_Maint.chk_daily_maint.visible(True)
+gui.F_Daily_Maint.chk_daily_maint.size(2580,255)
+gui.F_Daily_Maint.chk_daily_maint.zorder(0)
+gui.F_Daily_Maint.chk_daily_maint.position(200,500)
+gui.F_Daily_Maint.chk_daily_maint.enabled(True)
+gui.F_Daily_Maint.chk_daily_maint.alignment(0)
+gui.F_Daily_Maint.chk_daily_maint.fontname("Arial")
+gui.F_Daily_Maint.chk_daily_maint.fontsize(8)
+gui.F_Daily_Maint.lbl_comments.create(label,"Comments",True,1935,255,1,200,800,True,0,Arial,8,-2147483633,0)
+gui.F_Daily_Maint.cmd_save.create(button)
+gui.F_Daily_Maint.cmd_save.caption("Save")
+gui.F_Daily_Maint.cmd_save.visible(True)
+gui.F_Daily_Maint.cmd_save.size(855,375)
+gui.F_Daily_Maint.cmd_save.zorder(0)
+gui.F_Daily_Maint.cmd_save.position(200,3700)
+gui.F_Daily_Maint.cmd_save.enabled(True)
+gui.F_Daily_Maint.cmd_save.fontname("Arial")
+gui.F_Daily_Maint.cmd_save.fontsize(8)
+gui.F_Daily_Maint.cmd_save.event(click,cmd_save_click)
+gui.F_Daily_Maint.cmd_clear.create(button)
+gui.F_Daily_Maint.cmd_clear.caption("Clear")
+gui.F_Daily_Maint.cmd_clear.visible(True)
+gui.F_Daily_Maint.cmd_clear.size(855,375)
+gui.F_Daily_Maint.cmd_clear.zorder(0)
+gui.F_Daily_Maint.cmd_clear.position(1200,3700)
+gui.F_Daily_Maint.cmd_clear.enabled(True)
+gui.F_Daily_Maint.cmd_clear.fontname("Arial")
+gui.F_Daily_Maint.cmd_clear.fontsize(8)
+gui.F_Daily_Maint.cmd_clear.event(click,cmd_clear_click)
+gui.F_Daily_Maint.gsfg_comments.create(gsflexgrid)
+gui.F_Daily_Maint.gsfg_comments.FixedRows(0)
+gui.F_Daily_Maint.gsfg_comments.FixedCols(0)
+gui.F_Daily_Maint.gsfg_comments.visible(True)
+gui.F_Daily_Maint.gsfg_comments.size(10185,3375)
+gui.F_Daily_Maint.gsfg_comments.zorder(0)
+gui.F_Daily_Maint.gsfg_comments.position(175,4195)
+gui.F_Daily_Maint.gsfg_comments.enabled(True)
+gui.F_Daily_Maint.gsfg_comments.event(cellenter,gsfg_comments_cellenter)
+gui.F_Daily_Maint.lblEmp.create(label,"Emp",True,1635,255,1,1100,200,True,0,Arial,8,-2147483633,0)
+gui.F_Daily_Maint.ddl_workcenter.create(dropdownlist)
+gui.F_Daily_Maint.ddl_workcenter.visible(True)
+gui.F_Daily_Maint.ddl_workcenter.size(1740,330)
+gui.F_Daily_Maint.ddl_workcenter.zorder(0)
+gui.F_Daily_Maint.ddl_workcenter.position(7700,3800)
+gui.F_Daily_Maint.ddl_workcenter.enabled(True)
+gui.F_Daily_Maint.ddl_workcenter.fontname("Arial")
+gui.F_Daily_Maint.ddl_workcenter.fontsize(8)
+gui.F_Daily_Maint.cmd_populate.create(button)
+gui.F_Daily_Maint.cmd_populate.caption("Populate")
+gui.F_Daily_Maint.cmd_populate.visible(True)
+gui.F_Daily_Maint.cmd_populate.size(855,375)
+gui.F_Daily_Maint.cmd_populate.zorder(0)
+gui.F_Daily_Maint.cmd_populate.position(9500,3700)
+gui.F_Daily_Maint.cmd_populate.enabled(True)
+gui.F_Daily_Maint.cmd_populate.fontname("Arial")
+gui.F_Daily_Maint.cmd_populate.fontsize(8)
+gui.F_Daily_Maint.cmd_populate.event(click,cmd_populate_click)
+
+
+
+Program.Sub.ScreenSU.End
+
+Program.Sub.Preflight.Start
+
+Program.Sub.Preflight.End
+
+
+Program.Sub.Main.Start
+F.Intrinsic.Control.SetErrorHandler("Main_Err")
+F.Intrinsic.Control.ClearErrors
+
+V.Local.sError.Declare(String)
+V.Global.sEmployee.Declare(String)
+V.Global.iEmp.Declare(Long)
+V.Local.sWC.Declare(String)
+V.Local.bTableExists.Declare(Boolean)
+
+V.Global.sEmailList.Declare(String)
+'V.Global.sEmailList.Set("mkeyes@gssmail.com*!*mkeyes@gssmail.com")
+V.Global.sEmailList.Set("Brian.nuibe@submfg.com*!*Les-head@submfg.com*!*Doug.peterson@submfg.com")
+
+F.ODBC.Connection!conX.OpenConnection(V.Ambient.PDSN,V.Ambient.PUser,V.Ambient.PPass)
+
+F.Intrinsic.Control.If(V.Caller.Hook,=,"15870")
+	'If being run from SFDC
+	V.Global.sEmployee.Set(V.Passed.009994)
+	V.Local.sWC.Set(V.Passed.000010)
+	F.Intrinsic.String.Left(V.Local.sWC,4,V.Local.sWC)
+	Gui.F_Daily_Maint.cmd_populate.Enabled(False)
+	Gui.F_Daily_Maint.ddl_workcenter.Enabled(False)
+	F.Intrinsic.Control.CallSub(Load_wcs)
+	Gui.F_Daily_Maint.ddl_workcenter.Text(V.Local.sWC.Trim)
+	Gui.F_Daily_Maint.lblEmp.Caption(V.Global.sEmployee)
+	F.Intrinsic.Control.CallSub(Initalize_flexgrid)
+	F.Intrinsic.Control.CallSub(Cmd_populate_click)
+	Gui.F_Daily_Maint..Show
+F.Intrinsic.Control.Else
+	'if being run as a custom menu item
+	F.Global.Security.GetUserID(V.Caller.User,V.Caller.CompanyCode,V.Global.iEmp)
+	V.Global.sEmployee.Set(V.Caller.User)
+	Gui.F_Daily_Maint.cmd_populate.Enabled(True)
+	Gui.F_Daily_Maint.ddl_workcenter.Enabled(True)
+	F.Intrinsic.Control.CallSub(Load_wcs)
+	Gui.F_Daily_Maint.ddl_workcenter.ListIndex(0)
+	Gui.F_Daily_Maint.lblEmp.Caption(V.Global.sEmployee)
+	F.Intrinsic.Control.CallSub(Initalize_flexgrid)
+	Gui.F_Daily_Maint..Show
+F.Intrinsic.Control.EndIf
+
+F.Intrinsic.Control.ExitSub
+
+F.Intrinsic.Control.Label("Main_Err")
+F.Intrinsic.Control.If(V.Ambient.ErrorNumber,<>,0)
+	Function.Intrinsic.String.Concat("Project: ATG_3350_WO_DAILY_MAINT.gas",V.Ambient.Newline,V.Ambient.Newline,"Subroutine: ",V.Ambient.CurrentSubroutine,V.Ambient.NewLine,"Error Occurred ",V.Ambient.ErrorNumber," with description ",V.Ambient.ErrorDescription,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+	F.Intrinsic.Control.End
+Function.Intrinsic.Control.EndIf
+
+
+Program.Sub.Main.End
+
+
+program.sub.f_daily_maint_unload.start
+F.Intrinsic.Control.SetErrorHandler("f_daily_maint_unload_Err")
+F.Intrinsic.Control.ClearErrors
+
+V.Local.sError.Declare(String)
+
+F.ODBC.Connection!conX.Close
+F.Intrinsic.Control.End
+
+F.Intrinsic.Control.ExitSub
+
+F.Intrinsic.Control.Label("f_daily_maint_unload_Err")
+F.Intrinsic.Control.If(V.Ambient.ErrorNumber,<>,0)
+	Function.Intrinsic.String.Concat("Project: ATG_3350_WO_DAILY_MAINT.gas",V.Ambient.Newline,V.Ambient.Newline,"Subroutine: ",V.Ambient.CurrentSubroutine,V.Ambient.NewLine,"Error Occurred ",V.Ambient.ErrorNumber," with description ",V.Ambient.ErrorDescription,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+Function.Intrinsic.Control.EndIf
+
+
+program.sub.f_daily_maint_unload.end
+
+
+program.sub.cmd_save_click.start
+F.Intrinsic.Control.SetErrorHandler("cmd_save_click_Err")
+F.Intrinsic.Control.ClearErrors
+
+V.Local.sError.Declare(String)
+V.Local.sQuery.Declare(String)
+V.Local.sWC.Declare(String)
+V.Local.sText.Declare(String)
+
+V.Local.sWC.Set(V.Screen.F_Daily_Maint!ddl_workcenter.Text)
+V.Local.sText.Set(V.Screen.F_Daily_Maint!txt_comments.Text)
+F.Intrinsic.Control.If(V.Local.sText.Trim,<>,"")
+	V.Local.sQuery.Set("SELECT * FROM ATG_3350_WO_DAILY_MAINT")
+	F.ODBC.Connection!conX.OpenRecordsetRW("rst",V.Local.sQuery)
+	F.ODBC.conX!rst.AddNew
+		F.ODBC.conX!rst.Set!EMPLOYEE(V.Global.iEmp)
+		F.ODBC.conX!rst.Set!DATETM(V.Ambient.Now)
+		F.ODBC.conX!rst.Set!WORK_CENTER(V.Local.sWC)
+		F.ODBC.conX!rst.Set!COMMENTS(V.Local.sText)
+		F.ODBC.conX!rst.Set!COMPLETED_FLAG(V.Screen.F_Daily_Maint!chk_daily_maint.Value)
+	F.ODBC.conX!rst.Update
+	F.ODBC.conX!rst.Close
+
+	F.Intrinsic.String.Concat("The following notes were entered for work center ",V.Local.sWC," : ",V.Ambient.NewLine,V.Local.sText,V.Local.sText)
+
+	Function.Global.Messaging.CreateEMmessage(V.Global.sEmailList,"","noreply@submfg.com","Daily WO Maintenance Program","Daily Maintenance Update Notification",V.Local.sText)
+	'F.Global.Messaging.QueueMessage(V.Caller.CompanyCode,V.Caller.User,"ATG_3350_WO_DAILY_MAINT.gas","Daily Maintenance Comments","noreply@submfg.com",V.Global.sEmailList,V.Local.sText)
+	F.Intrinsic.Control.CallSub(Cmd_clear_click)
+	F.Intrinsic.Control.CallSub(Cmd_populate_click)
+
+F.Intrinsic.Control.Else
+	F.Intrinsic.UI.Msgbox("Please enter your comments prior to saving.")
+F.Intrinsic.Control.EndIf
+
+F.Intrinsic.Control.ExitSub
+
+F.Intrinsic.Control.Label("cmd_save_click_Err")
+F.Intrinsic.Control.If(V.Ambient.ErrorNumber,<>,0)
+	Function.Intrinsic.String.Concat("Project: ATG_3350_WO_DAILY_MAINT.gas",V.Ambient.Newline,V.Ambient.Newline,"Subroutine: ",V.Ambient.CurrentSubroutine,V.Ambient.NewLine,"Error Occurred ",V.Ambient.ErrorNumber," with description ",V.Ambient.ErrorDescription,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+Function.Intrinsic.Control.EndIf
+
+
+program.sub.cmd_save_click.end
+
+
+program.sub.cmd_clear_click.start
+F.Intrinsic.Control.SetErrorHandler("cmd_clear_click_Err")
+F.Intrinsic.Control.ClearErrors
+
+V.Local.sError.Declare(String)
+
+Gui.F_Daily_Maint.chk_daily_maint.Value(0)
+Gui.F_Daily_Maint.txt_comments.Text("")
+
+F.Intrinsic.Control.ExitSub
+
+F.Intrinsic.Control.Label("cmd_clear_click_Err")
+F.Intrinsic.Control.If(V.Ambient.ErrorNumber,<>,0)
+	Function.Intrinsic.String.Concat("Project: ATG_3350_WO_DAILY_MAINT.gas",V.Ambient.Newline,V.Ambient.Newline,"Subroutine: ",V.Ambient.CurrentSubroutine,V.Ambient.NewLine,"Error Occurred ",V.Ambient.ErrorNumber," with description ",V.Ambient.ErrorDescription,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+Function.Intrinsic.Control.EndIf
+
+
+program.sub.cmd_clear_click.end
+
+
+program.sub.gsfg_comments_cellenter.start
+F.Intrinsic.Control.SetErrorHandler("gsfg_comments_cellenter_Err")
+F.Intrinsic.Control.ClearErrors
+
+V.Local.sError.Declare(String)
+
+
+F.Intrinsic.Control.ExitSub
+
+F.Intrinsic.Control.Label("gsfg_comments_cellenter_Err")
+F.Intrinsic.Control.If(V.Ambient.ErrorNumber,<>,0)
+	Function.Intrinsic.String.Concat("Project: ATG_3350_WO_DAILY_MAINT.gas",V.Ambient.Newline,V.Ambient.Newline,"Subroutine: ",V.Ambient.CurrentSubroutine,V.Ambient.NewLine,"Error Occurred ",V.Ambient.ErrorNumber," with description ",V.Ambient.ErrorDescription,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+Function.Intrinsic.Control.EndIf
+
+
+program.sub.gsfg_comments_cellenter.end
+
+
+program.sub.cmd_populate_click.start
+F.Intrinsic.Control.SetErrorHandler("cmd_populate_click_Err")
+F.Intrinsic.Control.ClearErrors
+
+V.Local.sError.Declare(String)
+V.Local.sQuery.Declare(String)
+V.Local.sWC.Declare(String)
+V.Local.iRows.Declare(Long)
+V.Local.iUB.Declare(Long)
+
+Gui.F_Daily_Maint.gsfg_comments.Visible(False)
+
+V.Local.sWC.Set(V.Screen.F_Daily_Maint!ddl_workcenter.Text)
+Gui.F_Daily_Maint.gsfg_comments.Rows(1)
+F.Intrinsic.String.Concat("Select DateTm, Comments, Completed_Flag from ATG_3350_WO_DAILY_MAINT where WORK_CENTER = '",V.Local.sWC,"' order by DateTm",V.Local.sQuery)
+F.ODBC.Connection!conX.OpenRecordsetRO("rst",V.Local.sQuery)
+	F.Intrinsic.Control.DoUntil(V.ODBC.conX!rst.EOF,=,True)
+		V.Local.iRows.Set(V.Screen.F_Daily_Maint!gsfg_comments.Rows)
+		F.Intrinsic.Math.Add(1,V.Local.iRows,V.Local.iUB)
+		Gui.F_Daily_Maint.gsfg_comments.Rows(V.Local.iUB)
+		Gui.F_Daily_Maint.gsfg_comments.ApplyStyle(V.Local.iRows,1)
+		Gui.F_Daily_Maint.gsfg_comments.TextMatrix(0,V.Local.iRows,V.ODBC.conX!rst.FieldValTrim!DATETM)
+		Gui.F_Daily_Maint.gsfg_comments.TextMatrix(1,V.Local.iRows,V.ODBC.conX!rst.FieldValTrim!COMMENTS)
+			F.Intrinsic.Control.If(V.ODBC.conX!rst.FieldVal!COMPLETED_FLAG,=,True)
+			Gui.F_Daily_Maint.gsfg_comments.TextMatrix(2,V.Local.iRows,"Y")
+		F.Intrinsic.Control.Else
+			Gui.F_Daily_Maint.gsfg_comments.TextMatrix(2,V.Local.iRows,"N")
+		F.Intrinsic.Control.EndIf
+		F.ODBC.conX!rst.MoveNext
+	F.Intrinsic.Control.Loop
+F.ODBC.conX!rst.Close
+
+Gui.F_Daily_Maint.gsfg_comments.Visible(True)
+Gui.F_Daily_Maint.gsfg_comments.FixedRows(1)
+
+F.Intrinsic.Control.ExitSub
+
+F.Intrinsic.Control.Label("cmd_populate_click_Err")
+F.Intrinsic.Control.If(V.Ambient.ErrorNumber,<>,0)
+	Gui.F_Daily_Maint.gsfg_comments.Visible(True)
+	Function.Intrinsic.String.Concat("Project: ATG_3350_WO_DAILY_MAINT.gas",V.Ambient.Newline,V.Ambient.Newline,"Subroutine: ",V.Ambient.CurrentSubroutine,V.Ambient.NewLine,"Error Occurred ",V.Ambient.ErrorNumber," with description ",V.Ambient.ErrorDescription,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+Function.Intrinsic.Control.EndIf
+
+
+program.sub.cmd_populate_click.end
+
+
+Program.Sub.Load_WCs.Start
+F.Intrinsic.Control.SetErrorHandler("Load_WCs_Err")
+F.Intrinsic.Control.ClearErrors
+
+V.Local.sError.Declare(String)
+
+F.ODBC.Connection!conX.OpenLocalRecordsetRO("rst","select MACHINE from WORKCENTERS order by MACHINE")
+F.Intrinsic.Control.DoUntil(V.ODBC.conX!rst.EOF,=,True)
+	Gui.F_Daily_Maint.ddl_workcenter.AddItem(V.ODBC.conX!rst.FieldValTrim!MACHINE)
+	F.ODBC.conX!rst.MoveNext
+F.Intrinsic.Control.Loop
+F.ODBC.conX!rst.Close
+
+F.Intrinsic.Control.ExitSub
+
+F.Intrinsic.Control.Label("Load_WCs_Err")
+F.Intrinsic.Control.If(V.Ambient.ErrorNumber,<>,0)
+	Function.Intrinsic.String.Concat("Project: ATG_3350_WO_DAILY_MAINT.gas",V.Ambient.Newline,V.Ambient.Newline,"Subroutine: ",V.Ambient.CurrentSubroutine,V.Ambient.NewLine,"Error Occurred ",V.Ambient.ErrorNumber," with description ",V.Ambient.ErrorDescription,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+Function.Intrinsic.Control.EndIf
+
+
+Program.Sub.Load_WCs.End
+
+
+Program.Sub.initalize_flexgrid.Start
+F.Intrinsic.Control.SetErrorHandler("initalize_flexgrid_Err")
+F.Intrinsic.Control.ClearErrors
+
+V.Local.sError.Declare(String)
+V.Local.iCol.Declare(Long)
+
+Gui.F_Daily_Maint.gsfg_comments.Cols(3)
+Gui.F_Daily_Maint.gsfg_comments.Rows(2)
+
+F.Intrinsic.Control.For(V.Local.iCol,0,2,1)
+	Gui.F_Daily_Maint.gsfg_comments.BuildStyle(1,V.Local.iCol,"Format","Alignment",2)
+	Gui.F_Daily_Maint.gsfg_comments.BuildStyle(1,V.Local.iCol,"Type","Locked",True)
+F.Intrinsic.Control.Next(V.Local.iCol)
+
+Gui.F_Daily_Maint.gsfg_comments.TextMatrix(0,0,"Date")
+Gui.F_Daily_Maint.gsfg_comments.TextMatrix(1,0,"Comments")
+Gui.F_Daily_Maint.gsfg_comments.TextMatrix(2,0,"Daily Maint Cmpltd")
+
+Gui.F_Daily_Maint.gsfg_comments.ApplyStyle(1,1)
+Gui.F_Daily_Maint.gsfg_comments.FixedRows(1)
+Gui.F_Daily_Maint.gsfg_comments.SetColumnPercentages(".10:.80:.10")
+
+F.Intrinsic.Control.ExitSub
+
+F.Intrinsic.Control.Label("initalize_flexgrid_Err")
+F.Intrinsic.Control.If(V.Ambient.ErrorNumber,<>,0)
+	Function.Intrinsic.String.Concat("Project: ATG_3350_WO_DAILY_MAINT.gas",V.Ambient.Newline,V.Ambient.Newline,"Subroutine: ",V.Ambient.CurrentSubroutine,V.Ambient.NewLine,"Error Occurred ",V.Ambient.ErrorNumber," with description ",V.Ambient.ErrorDescription,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+Function.Intrinsic.Control.EndIf
+
+
+Program.Sub.initalize_flexgrid.End
+
+
+
